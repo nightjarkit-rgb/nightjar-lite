@@ -12,11 +12,15 @@ vault-template/      starting notes: Memory, Now, Journal, Daily/, Digests/
 ```
 
 ## Try it (5 minutes)
-1. Install [Claude Code](https://code.claude.com) and [Git for Windows](https://git-scm.com).
+1. Install [Claude Code](https://code.claude.com) and [Git for Windows](https://git-scm.com), then in Git Bash: `git clone https://github.com/nightjarkit-rgb/nightjar-lite && cd nightjar-lite`.
 2. Copy `vault-template/` somewhere as your notes folder.
-3. `cp config.example.sh config.sh` and set `VAULT` to that folder.
+3. `cp config.example.sh config.sh` and set `VAULT` to that folder, with forward slashes (`VAULT="C:/Users/you/Notes"`).
 4. In Git Bash: `JOB_DRYRUN=1 bash run-job.sh morning-brief`. Read `Digests/_dryrun/morning-brief.md` in your vault.
 5. Happy with it? Run `bash run-job.sh morning-brief` and open today's note in `Daily/`.
+
+What a brief looks like (made-up sample notes):
+
+![Sample morning brief](docs/sample-brief.png)
 
 Jobs can't use a shell, the web or subagents, and can't edit `Memory.md` or the runner folder. Each job's `.conf` lists exactly what it may read and write.
 
